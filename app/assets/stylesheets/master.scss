@@ -1,0 +1,74 @@
+$primary-font: "Lato", sans-serif;
+$brand-font: "Tillana", sans-serif;
+$main-blue: #337ab7;  
+$footer-height: 45px;
+$gold: #ffd700;
+
+html, body {
+  font-family: $primary-font;  
+}
+
+.navbar-default {
+  background-color: white;
+}
+
+.navbar-brand {
+  font-family: $brand-font;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+.navbar-brand:hover {
+  color: #ffd700;
+}
+
+.navbar-right li {
+  font-size: 20px;
+  letter-spacing: 5px;
+}
+
+
+/* Sticky footer */
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html, body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -$footer-height;
+  /* Pad bottom by footer height */
+  padding: 0 0 $footer-height;
+}
+
+/* Set the fixed height of the footer here */
+.footer {
+  height: $footer-height;
+}
+
+.footer-brand {
+  text-decoration: none;
+  font-family: $brand-font;
+  letter-spacing: 3px; 
+  font-size: 20px;
+}
+
+.footer-brand:hover {
+  text-decoration: none;
+  color: $gold;
+} 
+
+#dev {
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
+
+
