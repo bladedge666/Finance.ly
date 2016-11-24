@@ -12,14 +12,15 @@ html, body {
   background-color: white;
 }
 
-.navbar-brand {
+.navbar-default .navbar-brand {
   font-family: $brand-font;
   font-weight: 600;
   font-size: 30px;
+  color: $main-blue;
 }
 
-.navbar-brand:hover {
-  color: #ffd700;
+.navbar-default .navbar-brand:hover {
+  // color: rgba(229, 190, 39, );
 }
 
 .navbar-right li {
@@ -61,7 +62,7 @@ html, body {
 
 .footer-brand:hover {
   text-decoration: none;
-  color: $gold;
+  color: rgba(229, 0, 249, 0.5);
 } 
 
 #dev {
