@@ -3,6 +3,7 @@ $brand-font: "Tillana", sans-serif;
 $main-blue: #337ab7;  
 $footer-height: 45px;
 $gold: #ffd700;
+$content-text-size: 18px;
 
 html, body {
   font-family: $primary-font;  
@@ -31,9 +32,9 @@ html, body {
   color: $main-blue;
 }
 
-
-
-
+.container {
+  font-size: $content-text-size;
+}
 /* Sticky footer */
 /* Sticky footer styles
 -------------------------------------------------- */
