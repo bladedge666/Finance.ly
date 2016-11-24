@@ -2,13 +2,13 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Finance.ly</a>
+      <%= link_to 'Finance.ly', root_path, class: 'navbar-brand' %>
     </div>
 
     <ul class="nav navbar-nav navbar-right">
-      <li><a href="#">New Record</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Say Hi</a></li>
+      <li><%= link_to 'New Record', new_record_path %></li>
+      <li><%= link_to 'About', about_path %></a></li>
+      <li><%= link_to 'Say Hi', sayhi_path %></li>
     </ul>
   </div><!-- /.container-fluid -->
 </nav>
