@@ -1,12 +1,11 @@
 class RecordsController < ApplicationController
-  before_action :find_record, only: [:edit, :update, :destroy]
+  # before_action :find_record, only: [:edit, :update, :destroy]
 
   def index
     @records = Record.all    
     @total = Record.sum(:amount)
-    @balance = Record.where("amount >= 0").sum(:amount)
-    @debt = Record.where("amount < ?", 0).sum(:amount) 
-
+    @balance = Record.balance 
+    @debt = Record.debt
   end
 
   def new
@@ -25,9 +24,11 @@ class RecordsController < ApplicationController
   end
 
   def edit
+    @record = Record.find(params[:id])
   end
 
   def update
+    @record = Record.find(params[:id])
     if @record.update(record_params)
       flash[:success] = "Your record has been updated!"
       redirect_to root_path
@@ -38,6 +39,7 @@ class RecordsController < ApplicationController
   end
 
   def destroy
+    @record = Record.find(params[:id])
     @record.destroy
     flash[:notice] = "A record has been deleted!"
     redirect_to root_path
@@ -49,8 +51,8 @@ class RecordsController < ApplicationController
     params.require(:record).permit(:title, :amount, :date)
   end
 
-  def find_record
-    @record = Record.find(params[:id])
-  end
+  # def find_record
+  #   @record = Record.find(params[:id])
+  # end
 
 end
