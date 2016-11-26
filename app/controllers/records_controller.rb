@@ -14,7 +14,7 @@ class RecordsController < ApplicationController
 
   def create
     @record = Record.create(record_params)
-    if @record
+    if @record.valid?
       flash[:notice] = "Congratulations! Successfully created the financial record!"
     else
       flash[:alert] = "Failed to create the financial record!"
